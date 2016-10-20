@@ -217,14 +217,15 @@
     store.area("session", (function(){try{ return sessionStorage; }catch(e){}})());
 
     //Expose store to the global object
-    window.store = store;
+    //window.store = store;
+    module.exports = store;
+});
+    // if (typeof define === 'function' && define.amd !== undefined) {
+//         define(function () {
+//             return store;
+//         });
+//     } else if (typeof module !== 'undefined' && module.exports) {
+//         module.exports = store;
+//     }
 
-    if (typeof define === 'function' && define.amd !== undefined) {
-        define(function () {
-            return store;
-        });
-    } else if (typeof module !== 'undefined' && module.exports) {
-        module.exports = store;
-    }
-
-})(this, this.define);
+//})(this, this.define);
