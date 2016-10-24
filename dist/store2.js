@@ -1,6 +1,7 @@
 /*! store2 - v2.3.2 - 2015-10-27
 * Copyright (c) 2015 Nathan Bubna; Licensed MIT, GPL */
-;(function(window, define) {
+//;(function(window, define) {
+define(function(require, exports, module) {
     var _ = {
         version: "2.3.2",
         areas: {},
